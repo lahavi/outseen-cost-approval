@@ -1,0 +1,17 @@
+{
+  "name": "outseen",
+  "description": "Outseen plugins for Claude: cost approval for new AWS resources.",
+  "owner": {
+    "name": "Outseen",
+    "email": "service@outseen.com"
+  },
+  "plugins": [
+    {
+      "name": "outseen-cost-approval",
+      "source": "./",
+      "description": "Asks before Claude launches AWS resources over your monthly cost limit, and estimates AWS costs from CLI commands, Terraform plans and CloudFormation templates before anything is created.",
+      "category": "devops",
+      "homepage": "https://outseen.com/?utm_source=claude-plugin"
+    }
+  ]
+}

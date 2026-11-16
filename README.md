@@ -4,6 +4,16 @@ A Claude plugin that puts a cost check in front of AWS launches. When Claude is 
 
 Made by [Outseen](https://outseen.com/?utm_source=claude-plugin).
 
+## Install
+
+In Claude Code (2.1.275 or later):
+
+```
+/plugin install outseen-cost-approval --marketplace lahavi/outseen-cost-approval
+```
+
+Or add the marketplace once with `/plugin marketplace add lahavi/outseen-cost-approval`, then install `outseen-cost-approval@outseen`. In the desktop app's Code tab, add the marketplace the same way, then click **+** next to the prompt box, choose **Add plugins** and pick **AWS cost approval**. You need Node.js 20 or later.
+
 ## What it does
 
 **The cost check (Claude Code and Cowork).** Before Claude runs a shell command, the plugin looks for AWS launches in it.
