@@ -11,10 +11,22 @@
   "homepage": "https://outseen.com/?utm_source=claude-plugin",
   "repository": "https://github.com/lahavi/outseen-cost-approval",
   "license": "Apache-2.0",
-  "keywords": ["aws", "cost", "finops", "cloud-cost", "approval", "terraform", "cloudformation", "ec2", "rds", "budget"],
+  "keywords": [
+    "aws",
+    "cost",
+    "finops",
+    "cloud-cost",
+    "approval",
+    "terraform",
+    "cloudformation",
+    "ec2",
+    "rds",
+    "budget"
+  ],
   "documentationUrl": "https://github.com/lahavi/outseen-cost-approval#readme",
   "supportUrl": "https://github.com/lahavi/outseen-cost-approval/issues",
   "privacyPolicyUrl": "https://outseen.com/privacy",
+  "icon": "./.claude-plugin/icon.png",
   "userConfig": {
     "monthly_limit_usd": {
       "type": "number",
