@@ -1,0 +1,23 @@
+{
+  "name": "outseen-cost-approval",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Claude plugin: asks before Claude launches AWS resources over your monthly cost limit, and estimates AWS costs before launch.",
+  "license": "Apache-2.0",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit -p .",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "prices": "node scripts/build-prices.ts"
+  },
+  "dependencies": {
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.0"
+  }
+}

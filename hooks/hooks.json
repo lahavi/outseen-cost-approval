@@ -1,0 +1,17 @@
+{
+  "description": "Before Claude runs a command that launches AWS resources, price it and ask first if it may exceed your monthly limit.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/dist/hook.cjs\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

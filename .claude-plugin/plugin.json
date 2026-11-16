@@ -1,0 +1,39 @@
+{
+  "name": "outseen-cost-approval",
+  "displayName": "AWS cost approval",
+  "version": "0.1.0",
+  "description": "Asks before Claude launches AWS resources over your monthly cost limit, and estimates AWS costs from CLI commands, Terraform plans and CloudFormation templates before anything is created.",
+  "author": {
+    "name": "Outseen",
+    "email": "service@outseen.com",
+    "url": "https://outseen.com"
+  },
+  "homepage": "https://outseen.com/?utm_source=claude-plugin",
+  "repository": "https://github.com/lahavi/outseen-cost-approval",
+  "license": "Apache-2.0",
+  "keywords": ["aws", "cost", "finops", "cloud-cost", "approval", "terraform", "cloudformation", "ec2", "rds", "budget"],
+  "documentationUrl": "https://github.com/lahavi/outseen-cost-approval#readme",
+  "supportUrl": "https://github.com/lahavi/outseen-cost-approval/issues",
+  "privacyPolicyUrl": "https://outseen.com/privacy",
+  "userConfig": {
+    "monthly_limit_usd": {
+      "type": "number",
+      "title": "Monthly limit (USD)",
+      "description": "Claude asks you before a launch whose estimated monthly cost may exceed this amount.",
+      "default": 100,
+      "min": 0
+    },
+    "default_region": {
+      "type": "string",
+      "title": "Default AWS region",
+      "description": "Region to assume when a command or template doesn't name one.",
+      "default": "us-east-1"
+    },
+    "ask_when_unpriced": {
+      "type": "boolean",
+      "title": "Ask when the cost can't be read",
+      "description": "Also ask before terraform apply, cdk deploy and other launches whose cost can't be read from the command.",
+      "default": true
+    }
+  }
+}
